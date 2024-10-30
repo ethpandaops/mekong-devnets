@@ -1,8 +1,8 @@
 import numpy as np
 import math
 
-total_validators = 10000
-validator_per_machine = 250
+total_validators = 100000
+validator_per_machine = 1000
 start = 0
 
 cl_split = {
