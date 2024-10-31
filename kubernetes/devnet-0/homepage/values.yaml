@@ -129,8 +129,8 @@ testnet-homepage:
         dataLookup: doraUrl
       - name: "Assertoor"
         dataLookup: assertoorUrl
-      - name: "Beaconchain explorer"
-        dataLookup: "beaconexplorerUrl"
+      # - name: "Beaconchain explorer"
+      #   dataLookup: "beaconexplorerUrl"
       # - name: "Blobscan"
       #   dataLookup: blobscanUrl
       # - name: "Blobscan ethpanda edition"
