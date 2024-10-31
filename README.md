@@ -1,6 +1,6 @@
-<div align="center"><img src="./docs/images/panda.png" width="300"/></div>
-<h2 align="center">🐼 ❤️.oO<br>"Pandas love everything"</h2>
-<h1 align="center">Infrastructure code for Dev/Testnets</h1>
+<div align="center"><img src="./docs/images/panda.jpeg" width="300"/></div>
+<h2 align="center">🐼 ❤️.oO<br>"Pandas love Pectra"</h2>
+<h1 align="center">Infrastructure code for Testnets</h1>
 
 <p align="center">
 <a href="https://github.com/ethpandaops/template-testnet/actions/workflows/ansible_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/ansible_lint.yaml/badge.svg"></a>
@@ -8,13 +8,11 @@
 <a href="https://github.com/ethpandaops/template-testnet/actions/workflows/helm_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/helm_lint.yaml/badge.svg"></a>
 </p>
 
-This repository contains the infrastructure code used to setup ~all~ dev/testnets. A lot of the code uses reusable components either provided by our [ansible collection](https://github.com/ethpandaops/ansible-collection-general) or our [helm charts for kubernetes](https://github.com/ethpandaops/ethereum-helm-charts/).
-
 # Networks
 
 Status   | Network    | Links   | Ansible                                                      | Terraform | Kubernetes
 ------   | --------   | ----     |  -----                                                       | -------   | ------
- 🟢Template🔴 | [devnet-0](https://template.devnet.io/)   | [Network config](network-configs/devnet-0) / [Inventory](https://bootnode-1.devnet-0.ethpandaops.io/meta/api/v1/inventory.json) / [Validator ranges](https://bootnode-1.devnet-0.ethpandaops.io/meta/api/v1/validator-ranges.json)    | [🔗](ansible/inventories/devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
+ 🟢 Mekong | [mekong](https://mekong.ethpandaops.io/)   | [Network config](network-configs/devnet-0) / [Inventory](https://bootnode-1.mekong-devnet-0.ethpandaops.io/meta/api/v1/inventory.json) / [Validator ranges](https://bootnode-1.mekong-devnet-0.ethpandaops.io/meta/api/v1/validator-ranges.json)    | [🔗](ansible/inventories/mekong-devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
 
 # Development
 ## Version management for tools

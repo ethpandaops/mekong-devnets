@@ -19,14 +19,14 @@ testnet-homepage:
     className: ingress-nginx-public
 
     hosts:
-      - host: mekong-devnet-0.ethpandaops.io
+      - host: mekong.ethpandaops.io
         paths:
           - path: /
             pathType: Prefix
 
   customMarkdown: |-
     ## Network Spec
-    https://notes.ethereum.org/@ethpandaops/mekong-devnet-0
+    https://notes.ethereum.org/@ethpandaops/mekong
 
     ## Ansible setup
     https://github.com/ethpandaops/mekong-devnets
@@ -35,50 +35,50 @@ testnet-homepage:
     https://github.com/ethpandaops/mekong-devnets/blob/master/ansible/inventories/devnet-0/group_vars/all/images.yaml
 
     ## Validator ranges
-    - https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/validator-ranges
+    - https://config.mekong.ethpandaops.io/api/v1/nodes/validator-ranges
 
     Some examples:
     ```sh
     ## Pretty print in YAML format
-    curl -s https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/validator-ranges \
+    curl -s https://config.mekong.ethpandaops.io/api/v1/nodes/validator-ranges \
       | yq '.ranges' -P
     ```
 
     ## Ethereum node inventory
-    - https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/inventory
+    - https://config.mekong.ethpandaops.io/api/v1/nodes/inventory
 
     Some examples on how to filter specific data from the node inventory:
     ```sh
     # Getting execution layer client enodes
-    curl -s https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/inventory \
+    curl -s https://config.mekong.ethpandaops.io/api/v1/nodes/inventory \
       | jq -r '.ethereum_pairs[] | .execution.enode'
     # Getting conseus layer client ENRs
-    curl -s https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/inventory \
+    curl -s https://config.mekong.ethpandaops.io/api/v1/nodes/inventory \
       | jq -r '.ethereum_pairs[] | .consensus.enr'
     ```
 
     ## Genesis configuration
     ### Execution layer clients
-    - https://config.mekong-devnet-0.ethpandaops.io/el/genesis.json
-    - https://config.mekong-devnet-0.ethpandaops.io/el/besu.json
-    - https://config.mekong-devnet-0.ethpandaops.io/el/chainspec.json
+    - https://config.mekong.ethpandaops.io/el/genesis.json
+    - https://config.mekong.ethpandaops.io/el/besu.json
+    - https://config.mekong.ethpandaops.io/el/chainspec.json
 
     ### Consensus layer clients
-    - https://config.mekong-devnet-0.ethpandaops.io/cl/config.yaml
-    - https://config.mekong-devnet-0.ethpandaops.io/cl/genesis.ssz
-    - https://config.mekong-devnet-0.ethpandaops.io/cl/deposit_contract.txt
-    - https://config.mekong-devnet-0.ethpandaops.io/cl/deposit_contract_block.txt
-    - https://config.mekong-devnet-0.ethpandaops.io/cl/deposit_contract_block_hash.txt
+    - https://config.mekong.ethpandaops.io/cl/config.yaml
+    - https://config.mekong.ethpandaops.io/cl/genesis.ssz
+    - https://config.mekong.ethpandaops.io/cl/deposit_contract.txt
+    - https://config.mekong.ethpandaops.io/cl/deposit_contract_block.txt
+    - https://config.mekong.ethpandaops.io/cl/deposit_contract_block_hash.txt
 
 
   customArgs:
     - -b
-    - https://mekong-devnet-0.ethpandaops.io
+    - https://mekong.ethpandaops.io
 
   config:
-    baseURL: https://mekong-devnet-0.ethpandaops.io
+    baseURL: https://mekong.ethpandaops.io
     languageCode: en-us
-    title: mekong-devnet-0
+    title: mekong
     theme: PaperMod
     markup:
       highlight:
@@ -90,19 +90,18 @@ testnet-homepage:
       disableThemeToggle: true
       defaultTheme: dark
       ethereum:
-        faucetUrl: https://faucet.mekong-devnet-0.ethpandaops.io
-        rpcUrl: https://rpc.mekong-devnet-0.ethpandaops.io
-        beaconRpcUrl: https://beacon.mekong-devnet-0.ethpandaops.io
-        explorerUrl: https://explorer.mekong-devnet-0.ethpandaops.io
-        forkmonUrl: https://forkmon.mekong-devnet-0.ethpandaops.io
-        assertoorUrl: https://assertoor.mekong-devnet-0.ethpandaops.io
-        beaconexplorerUrl: "https://mekong-devnet-0.beaconcha.in"
-        doraUrl: https://dora.mekong-devnet-0.ethpandaops.io
-        checkpointSyncUrl: "https://checkpoint-sync.mekong-devnet-0.ethpandaops.io"
+        faucetUrl: https://faucet.mekong.ethpandaops.io
+        rpcUrl: https://rpc.mekong.ethpandaops.io
+        beaconRpcUrl: https://beacon.mekong.ethpandaops.io
+        explorerUrl: https://explorer.mekong.ethpandaops.io
+        forkmonUrl: https://forkmon.mekong.ethpandaops.io
+        assertoorUrl: https://assertoor.mekong.ethpandaops.io
+        beaconexplorerUrl: "https://mekong.beaconcha.in"
+        doraUrl: https://dora.mekong.ethpandaops.io
+        checkpointSyncUrl: "https://checkpoint-sync.mekong.ethpandaops.io"
         blobscanUrl: https://blobscan.com
-        blobscanethpandaUrl: https://blobscan.mekong-devnet-0.ethpandaops.io
-        ethstatsUrl: https://ethstats.mekong-devnet-0.ethpandaops.io
-        chainName: "mekong-devnet-0"
+        ethstatsUrl: https://ethstats.mekong.ethpandaops.io
+        chainName: "mekong"
         chainId: "7078815900"
         github: https://github.com/ethpandaops/mekong-devnets/tree/master/network-configs/devnet-0/metadata
       metamask:
@@ -132,10 +131,10 @@ testnet-homepage:
         dataLookup: assertoorUrl
       - name: "Beaconchain explorer"
         dataLookup: "beaconexplorerUrl"
-      - name: "Blobscan"
-        dataLookup: blobscanUrl
-      - name: "Blobscan ethpanda edition"
-        dataLookup: blobscanethpandaUrl
+      # - name: "Blobscan"
+      #   dataLookup: blobscanUrl
+      # - name: "Blobscan ethpanda edition"
+      #   dataLookup: blobscanethpandaUrl
       - name: "Checkpoint Sync"
         dataLookup: checkpointSyncUrl
       - name: "Faucet"

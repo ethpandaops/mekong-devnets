@@ -17,14 +17,14 @@ dora:
     enabled: true
     className: ingress-nginx-public
     hosts:
-      - host: dora.mekong-devnet-0.ethpandaops.io
+      - host: dora.mekong.ethpandaops.io
         paths:
           - path: /
             pathType: Prefix
 
-  name: mekong-devnet-0
-  configPath: "https://config.mekong-devnet-0.ethpandaops.io/cl/config.yaml"
-  validatorNamesInventory: "https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/validator-ranges"
+  name: mekong
+  configPath: "https://config.mekong.ethpandaops.io/cl/config.yaml"
+  validatorNamesInventory: "https://config.mekong.ethpandaops.io/api/v1/nodes/validator-ranges"
   proxyCount: 2
   extraEnv:
     - name: FRONTEND_PPROF

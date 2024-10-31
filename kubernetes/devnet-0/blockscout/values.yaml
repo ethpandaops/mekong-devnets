@@ -5,8 +5,8 @@ blockscout-stack:
   config:
     network:
       id: 7078815900
-      name: mekong-devnet-0
-      shortname: mekong-devnet-0
+      name: mekong
+      shortname: mekong
       currency:
         name: Ether
         symbol: ETH
@@ -17,7 +17,7 @@ blockscout-stack:
     testnet: true
     nameService:
       enabled: true
-      url: "https://explorer.mekong-devnet-0.ethpandaops.io"
+      url: "https://explorer.mekong.ethpandaops.io"
     prometheus:
       enabled: false
 
@@ -41,7 +41,7 @@ blockscout-stack:
       ECTO_USE_SSL: "false"
       INDEXER_COIN_BALANCES_BATCH_SIZE: "5"
       NETWORK: Ethereum
-      SUBNETWORK: mekong-devnet-0
+      SUBNETWORK: mekong
       POOL_SIZE: "15"
       CHAIN_SPEC_PATH: /config-update/chainspec.json
 
@@ -51,7 +51,7 @@ blockscout-stack:
     ingress:
       enabled: true
       className: ingress-nginx-public
-      hostname: explorer-api.mekong-devnet-0.ethpandaops.io
+      hostname: explorer-api.mekong.ethpandaops.io
       tls:
         enabled: true
 
@@ -74,7 +74,7 @@ blockscout-stack:
         - sh
         - -ace
         - >
-          CHAINSPEC=https://config.mekong-devnet-0.ethpandaops.io/el/chainspec.json;
+          CHAINSPEC=https://config.mekong.ethpandaops.io/el/chainspec.json;
           mkdir -p /config-update;
           wget -O /config-update/chainspec.json $CHAINSPEC;
           echo "got genesis";
@@ -94,18 +94,18 @@ blockscout-stack:
     ingress:
       enabled: true
       className: ingress-nginx-public
-      hostname: explorer.mekong-devnet-0.ethpandaops.io
+      hostname: explorer.mekong.ethpandaops.io
       tls:
         enabled: true
 
     env:
-      NEXT_PUBLIC_API_HOST: explorer-api.mekong-devnet-0.ethpandaops.io
+      NEXT_PUBLIC_API_HOST: explorer-api.mekong.ethpandaops.io
       NEXT_PUBLIC_API_PROTOCOL: https
       NEXT_PUBLIC_API_WEBSOCKET_PROTOCOL: wss
-      NEXT_PUBLIC_NETWORK_NAME: mekong-devnet-0
+      NEXT_PUBLIC_NETWORK_NAME: mekong
       NEXT_PUBLIC_NETWORK_ID: 7078815900
-      NEXT_PUBLIC_NETWORK_RPC_URL: https://rpc.mekong-devnet-0.ethpandaops.io
-      NEXT_PUBLIC_APP_HOST: explorer.mekong-devnet-0.ethpandaops.io
+      NEXT_PUBLIC_NETWORK_RPC_URL: https://rpc.mekong.ethpandaops.io
+      NEXT_PUBLIC_APP_HOST: explorer.mekong.ethpandaops.io
       NEXT_PUBLIC_APP_PROTOCOL: https
       NEXT_PUBLIC_AD_BANNER_PROVIDER: none
       NEXT_PUBLIC_AD_TEXT_PROVIDER: none

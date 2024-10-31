@@ -13,7 +13,7 @@ ethstats:
     className: ingress-nginx-public
 
     hosts:
-      - host: ethstats.mekong-devnet-0.ethpandaops.io
+      - host: ethstats.mekong.ethpandaops.io
         paths:
           - path: /
             pathType: Prefix

@@ -18,7 +18,7 @@ forky:
     enabled: true
     className: ingress-nginx-public
     hosts:
-      - host: forky.mekong-devnet-0.ethpandaops.io
+      - host: forky.mekong.ethpandaops.io
         paths:
           - path: /
             pathType: Prefix
@@ -54,14 +54,14 @@ forky:
         type: s3
         config:
           region: us-east-1
-          bucket_name: mekong-devnet-0/forky
+          bucket_name: mekong/forky
           endpoint: https://<path:/secrets/services/services.enc.yaml#cloudflare | jsonPath {.account_ids.ethdevops}>.r2.cloudflarestorage.com/ethpandaops-devnet-dumpster
           access_key: <path:/secrets/services/services.enc.yaml#cloudflare | jsonPath {.r2.devnets.access_key_id}>
           access_secret: <path:/secrets/services/services.enc.yaml#cloudflare | jsonPath {.r2.devnets.secret_access_key}>
       indexer: {}
       ethereum:
         network:
-          name: "mekong-devnet-0"
+          name: "mekong"
           spec:
             seconds_per_slot: 12
             slots_per_epoch: 32

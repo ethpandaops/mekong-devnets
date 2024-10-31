@@ -17,12 +17,12 @@ dugtrio:
     enabled: true
     className: ingress-nginx-public
     hosts:
-      - host: beacon.mekong-devnet-0.ethpandaops.io
+      - host: beacon.mekong.ethpandaops.io
         paths:
           - path: /
             pathType: Prefix
 
-  dugtrioFrontendTitle: "Dugtrio: mekong-devnet-0"
+  dugtrioFrontendTitle: "Dugtrio: mekong"
   dugtrioProxyCount: 2
   dugtrioProxyBlockedPaths:
     - "^/teku/v[0-9]+/admin/.*"

@@ -3,7 +3,7 @@
 network: devnet-0
 chainId: 7078815900
 
-domain: mekong-devnet-0.ethpandaops.io
+domain: mekong.ethpandaops.io
 
 config:
   enabled: true

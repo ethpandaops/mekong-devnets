@@ -10,11 +10,11 @@ forkmon:
     enabled: true
     className: ingress-nginx-public
     hosts:
-      - host: forkmon.mekong-devnet-0.ethpandaops.io
+      - host: forkmon.mekong.ethpandaops.io
         paths:
           - path: /
             pathType: Prefix
-  network: mekong-devnet-0
+  network: mekong
   endpoints:
   # Rpc
   - addr: http://geth-teku-001:8545

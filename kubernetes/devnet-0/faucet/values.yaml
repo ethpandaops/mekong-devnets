@@ -22,16 +22,16 @@ powfaucet:
     className: ingress-nginx-public
 
     hosts:
-      - host: faucet.mekong-devnet-0.ethpandaops.io
+      - host: faucet.mekong.ethpandaops.io
         paths:
           - path: /
             pathType: Prefix
   httpProxyCount: 2
 
-  faucetTitle: "mekong-devnet-0 PoW Faucet"
+  faucetTitle: "mekong PoW Faucet"
   faucetPrivkey: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.faucet_private_key}>"
   faucetRpcUrl: "http://geth-teku-001:8545"
-  faucetExplorerLink: "https://explorer.mekong-devnet-0.ethpandaops.io/tx/{txid}"
+  faucetExplorerLink: "https://explorer.mekong.ethpandaops.io/tx/{txid}"
   faucetTxGasLimit: 100000
 
   faucetCaptchaEnabled: true

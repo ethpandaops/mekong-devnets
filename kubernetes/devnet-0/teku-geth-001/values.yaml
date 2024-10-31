@@ -22,7 +22,7 @@ teku-geth-001:
               - --sync-mode=FULL
               - --data-storage-format=BONSAI
               - --bonsai-limit-trie-logs-enabled=false
-              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>@ethstats.mekong-devnet-0.ethpandaops.io:443
+              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>@ethstats.mekong.ethpandaops.io:443
             nethermind:
               - --Init.ChainSpecPath=/data/network-config/chainspec.json
               - --JsonRpc.EnabledModules=Eth,Subscribe,Trace,TxPool,Web3,Personal,Proof,Net,Parity,Health,Rpc,Debug,Admin
@@ -33,7 +33,7 @@ teku-geth-001:
               - --EthStats.Enabled=true
               - --EthStats.Name=k8s-teku-geth-001
               - --EthStats.Secret=<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>
-              - --EthStats.Server=wss://ethstats.mekong-devnet-0.ethpandaops.io/api/
+              - --EthStats.Server=wss://ethstats.mekong.ethpandaops.io/api/
               - --log=INFO
               - --Seq.MinLevel=Info
               - --Seq.ServerUrl=https://seq.nethermind.io
@@ -44,8 +44,10 @@ teku-geth-001:
               - --http.vhosts=*
               - --networkid=7078815900
               - --syncmode=full
+              - --state.scheme=hash
+              - --gcmode=archive
               - --bootnodes=enode://469d455135c987799a57505ce24a8d022576382da3c22f2cd44616ca1ca5c31b572570c54edcd59d75e3bf11fb284e15180c61108a14bc53bcee8333c30ab3f9@157.230.225.158:30303?discport=30303
-              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>@ethstats.mekong-devnet-0.ethpandaops.io
+              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>@ethstats.mekong.ethpandaops.io
               - --rpc.allow-unprotected-txs
             erigon:
               - --chain=dev
@@ -56,7 +58,7 @@ teku-geth-001:
               - --networkid=7078815900
               - --db.size.limit=500GB
               - --bootnodes=enode://469d455135c987799a57505ce24a8d022576382da3c22f2cd44616ca1ca5c31b572570c54edcd59d75e3bf11fb284e15180c61108a14bc53bcee8333c30ab3f9@157.230.225.158:30303?discport=30303
-              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>@ethstats.mekong-devnet-0.ethpandaops.io
+              - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>@ethstats.mekong.ethpandaops.io
             ethereumjs:
               - --gethGenesis=/data/network-config/genesis.json
               - --bootnodes=enode://469d455135c987799a57505ce24a8d022576382da3c22f2cd44616ca1ca5c31b572570c54edcd59d75e3bf11fb284e15180c61108a14bc53bcee8333c30ab3f9@157.230.225.158:30303?discport=30303
@@ -146,10 +148,10 @@ teku-geth-001:
           - sh
           - -ace
           - >
-            CHAINSPEC_URI=https://config.mekong-devnet-0.ethpandaops.io/el/chainspec.json;
-            GENESIS_URI=https://config.mekong-devnet-0.ethpandaops.io/el/genesis.json;
-            BESU_GENESIS_URI=https://config.mekong-devnet-0.ethpandaops.io/el/besu.json;
-            ENODES_URI=https://config.mekong-devnet-0.ethpandaops.io/el/enodes.txt;
+            CHAINSPEC_URI=https://config.mekong.ethpandaops.io/el/chainspec.json;
+            GENESIS_URI=https://config.mekong.ethpandaops.io/el/genesis.json;
+            BESU_GENESIS_URI=https://config.mekong.ethpandaops.io/el/besu.json;
+            ENODES_URI=https://config.mekong.ethpandaops.io/el/enodes.txt;
             mkdir -p /data/network-config;
             if ! [ -f /data/network_config_init_done ];
             then
@@ -180,7 +182,7 @@ teku-geth-001:
           - >
             if ! [ -f /data/genesis_init_done ];
             then
-              geth init --datadir /data /data/network-config/genesis.json;
+              geth --datadir /data init --state.scheme=hash /data/network-config/genesis.json;
               touch /data/genesis_init_done;
               echo "genesis init done";
             else
@@ -230,13 +232,13 @@ teku-geth-001:
         - -ace
         - >
           apk add jq curl sed;
-          DEPOSIT_CONTRACT_URI=https://config.mekong-devnet-0.ethpandaops.io/cl/deposit_contract.txt;
-          DEPOSIT_CONTRACT_BLOCK_URI=https://config.mekong-devnet-0.ethpandaops.io/cl/deposit_contract_block.txt;
-          DEPOSIT_CONTRACT_BLOCK_HASH_URI=https://config.mekong-devnet-0.ethpandaops.io/cl/deposit_contract_block_hash.txt;
-          GENESIS_CONFIG_URI=https://config.mekong-devnet-0.ethpandaops.io/cl/config.yaml;
-          GENESIS_SSZ_URI=https://config.mekong-devnet-0.ethpandaops.io/cl/genesis.ssz;
+          DEPOSIT_CONTRACT_URI=https://config.mekong.ethpandaops.io/cl/deposit_contract.txt;
+          DEPOSIT_CONTRACT_BLOCK_URI=https://config.mekong.ethpandaops.io/cl/deposit_contract_block.txt;
+          DEPOSIT_CONTRACT_BLOCK_HASH_URI=https://config.mekong.ethpandaops.io/cl/deposit_contract_block_hash.txt;
+          GENESIS_CONFIG_URI=https://config.mekong.ethpandaops.io/cl/config.yaml;
+          GENESIS_SSZ_URI=https://config.mekong.ethpandaops.io/cl/genesis.ssz;
           mkdir -p /data/network-config;
-          curl -s https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/inventory | jq -r '.ethereum_pairs[] | .consensus.enr' > /data/network-config/bootstrap_nodes.txt;
+          curl -s https://config.mekong.ethpandaops.io/api/v1/nodes/inventory | jq -r '.ethereum_pairs[] | .consensus.enr' > /data/network-config/bootstrap_nodes.txt;
           if ! [ -f /data/network-config/genesis.ssz ];
           then
             wget -O /data/network-config/deposit_contract.txt $DEPOSIT_CONTRACT_URI;
