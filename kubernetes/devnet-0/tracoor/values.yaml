@@ -17,7 +17,7 @@ tracoor-single:
       enabled: true
       className: ingress-nginx-public
       hosts:
-        - host: tracoor.mekong-devnet-0.ethpandaops.io
+        - host: tracoor.mekong.ethpandaops.io
           paths:
             - path: /
               pathType: Prefix
@@ -135,46 +135,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: grandine-geth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-geth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-geth-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: grandine-geth-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-geth-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-geth-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: grandine-geth-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-geth-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-geth-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: grandine-geth-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-geth-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-geth-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: grandine-nethermind-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -182,26 +142,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-nethermind-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-nethermind-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: grandine-nethermind-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-nethermind-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-nethermind-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: grandine-nethermind-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-nethermind-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-nethermind-3.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -235,16 +175,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: lighthouse-besu-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-besu-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-besu-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: lighthouse-erigon-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -252,16 +182,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-erigon-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-erigon-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-erigon-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-erigon-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-erigon-2.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -285,126 +205,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: lighthouse-geth-10
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-10.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-10.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-11
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-11.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-11.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-12
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-12.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-12.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-13
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-13.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-13.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-6
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-6.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-6.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-7
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-7.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-7.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-8
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-8.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-8.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-geth-9
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-geth-9.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-9.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: lighthouse-nethermind-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -412,66 +212,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-nethermind-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-nethermind-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-nethermind-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-nethermind-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-nethermind-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-nethermind-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-nethermind-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-nethermind-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-nethermind-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-nethermind-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-nethermind-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-nethermind-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-nethermind-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-nethermind-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-nethermind-6
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-nethermind-6.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-nethermind-6.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-nethermind-7
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-nethermind-7.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-nethermind-7.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -492,16 +232,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-reth-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-reth-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lighthouse-reth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-reth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-reth-2.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -545,46 +275,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: lodestar-geth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-geth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lodestar-geth-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lodestar-geth-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-geth-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lodestar-geth-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lodestar-geth-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-geth-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lodestar-geth-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lodestar-geth-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-geth-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lodestar-geth-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: lodestar-nethermind-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -592,26 +282,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-nethermind-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lodestar-nethermind-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lodestar-nethermind-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-nethermind-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lodestar-nethermind-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: lodestar-nethermind-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-nethermind-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lodestar-nethermind-3.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -675,46 +345,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: nimbus-geth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-geth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-geth-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: nimbus-geth-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-geth-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-geth-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: nimbus-geth-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-geth-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-geth-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: nimbus-geth-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-geth-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-geth-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: nimbus-nethermind-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -722,26 +352,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-nethermind-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-nethermind-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: nimbus-nethermind-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-nethermind-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-nethermind-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: nimbus-nethermind-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-nethermind-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-nethermind-3.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -775,16 +385,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: prysm-besu-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-besu-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-besu-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: prysm-erigon-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -792,16 +392,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-erigon-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-erigon-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-erigon-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-erigon-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-erigon-2.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -825,126 +415,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: prysm-geth-10
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-10.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-10.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-11
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-11.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-11.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-12
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-12.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-12.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-13
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-13.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-13.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-6
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-6.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-6.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-7
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-7.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-7.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-8
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-8.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-8.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-geth-9
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-geth-9.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-9.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: prysm-nethermind-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -952,66 +422,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-nethermind-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-nethermind-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-nethermind-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-nethermind-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-nethermind-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-nethermind-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-nethermind-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-nethermind-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-nethermind-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-nethermind-6
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-nethermind-6.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-6.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: prysm-nethermind-7
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-nethermind-7.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-7.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -1035,16 +445,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: prysm-reth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.prysm-reth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-reth-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: teku-besu-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -1055,16 +455,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: teku-besu-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-besu-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-besu-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: teku-erigon-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -1072,16 +462,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-erigon-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-erigon-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-erigon-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-erigon-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-erigon-2.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -1105,96 +485,6 @@ tracoor-single:
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
-      - name: teku-geth-10
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-10.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-10.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-5.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-6
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-6.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-6.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-7
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-7.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-7.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-8
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-8.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-8.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-geth-9
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-geth-9.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-geth-9.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
       - name: teku-nethermind-1
         ethereum:
           overrideNetworkName: mekong-devnet-0
@@ -1202,46 +492,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-nethermind-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-nethermind-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-nethermind-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-nethermind-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-nethermind-2.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-nethermind-3
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-nethermind-3.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-nethermind-3.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-nethermind-4
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-nethermind-4.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-nethermind-4.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-nethermind-5
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-nethermind-5.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-nethermind-5.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
@@ -1262,16 +512,6 @@ tracoor-single:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-reth-1.mekong-devnet-0.ethpandaops.io
           execution:
             nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-reth-1.mekong-devnet-0.ethpandaops.io
-            traceDisableMemory: true
-            traceDisableStack: true
-            traceDisableStorage: true
-      - name: teku-reth-2
-        ethereum:
-          overrideNetworkName: mekong-devnet-0
-          beacon:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-reth-2.mekong-devnet-0.ethpandaops.io
-          execution:
-            nodeAddress: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-reth-2.mekong-devnet-0.ethpandaops.io
             traceDisableMemory: true
             traceDisableStack: true
             traceDisableStorage: true
