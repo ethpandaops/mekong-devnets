@@ -33,7 +33,7 @@ default_tooling_images:
   eth_fauceth: chainflag/eth-faucet:latest
   blobscan: blossomlabs/blobscan:latest
   blobscan_indexer: blossomlabs/blobscan-indexer:latest
-  dora: ethpandaops/dora:master-latest
+  dora: ethpandaops/dora:pk910-trigger-el-requests-latest
   dugtrio: ethpandaops/dugtrio:latest
   ethereum_genesis_generator: ethpandaops/ethereum-genesis-generator:3.4.0
   tracoor: ethpandaops/tracoor:0.0.25-debian
