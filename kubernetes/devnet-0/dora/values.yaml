@@ -4,7 +4,7 @@ dora:
   fullnameOverride: dora
   image:
     repository: ethpandaops/dora
-    tag: master-latest
+    tag: pk910-trigger-el-requests-latest
     pullPolicy: Always
   resources:
     requests:
@@ -30,6 +30,16 @@ dora:
     - name: FRONTEND_PPROF
       value: "true"
     - name: FRONTEND_SHOW_SENSITIVE_PEER_INFOS
+      value: "true"
+    - name: FRONTEND_ETH_EXPLORER_LINK
+      value: "https://explorer.mekong.ethpandaops.io/"
+    - name: FRONTEND_PUBLIC_RPC_URL
+      value: "https://rpc.mekong.ethpandaops.io"
+    - name: FRONTEND_RAINBOWKIT_PROJECT_ID
+      value: "15fe4ab4d5c0bcb6f0dc7c398301ff0e"
+    - name: FRONTEND_SHOW_SUBMIT_DEPOSIT
+      value: "true"
+    - name: FRONTEND_SHOW_SUBMIT_EL_REQUESTS
       value: "true"
   postgresql:
     name: "dora-postgresql"
