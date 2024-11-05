@@ -100,6 +100,7 @@ testnet-homepage:
         doraUrl: https://dora.mekong.ethpandaops.io
         checkpointSyncUrl: "https://checkpoint-sync.mekong.ethpandaops.io"
         blobscanUrl: https://blobscan.com
+        blobscanethpandaUrl: https://blobscan.mekong.ethpandaops.io
         ethstatsUrl: https://ethstats.mekong.ethpandaops.io
         chainName: "mekong"
         chainId: "7078815900"

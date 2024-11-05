@@ -1,0 +1,7 @@
+lighthouse_container_command_extra_args:
+  - --testnet-dir=/network-config
+  - --boot-nodes={{ ethereum_cl_bootnodes | join(',') }}
+  - --allow-insecure-genesis-sync
+  - --genesis-backfill
+  - --reconstruct-historic-states
+  - --disable-backfill-rate-limiting
