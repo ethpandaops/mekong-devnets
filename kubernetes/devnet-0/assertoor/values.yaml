@@ -399,7 +399,7 @@ assertoor:
       executionUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-reth-2.mekong-devnet-0.ethpandaops.io
       consensusUrl: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.teku-reth-2.mekong-devnet-0.ethpandaops.io
 
-  validatorNamesInventory: https://config.mekong.ethpandaops.io/api/v1/nodes/validator-ranges
+  validatorNamesInventory: https://config.mekong-devnet-0.ethpandaops.io/api/v1/nodes/validator-ranges
   globalVariables:
     walletPrivkey: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.assertoor_private_key}>"
     clientPairNames:

@@ -67,5 +67,4 @@ rpc-proxy:
       "debug_traceBlock",
       "trace_transaction",
       "trace_block",
-      "txpool_content",
     ]
