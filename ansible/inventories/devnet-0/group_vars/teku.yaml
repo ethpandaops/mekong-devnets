@@ -39,7 +39,7 @@ teku_container_command_extra_args:
   - --network=/network-config/config.yaml
   - --genesis-state=/network-config/genesis.ssz
   - --p2p-discovery-bootnodes={{ ethereum_cl_bootnodes | join(',') }}
-  - --p2p-peer-upper-bound=100
+  - --p2p-peer-upper-bound=200
   - --data-storage-non-canonical-blocks-enabled=true
   - --data-storage-mode=PRUNE
   - --validators-graffiti={{ ansible_hostname }}
