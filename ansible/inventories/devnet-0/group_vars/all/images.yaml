@@ -1,6 +1,6 @@
 default_ethereum_client_images:
 ### Consensus layer clients
-  lighthouse: ethpandaops/lighthouse:pawan-electra-alpha7-b2b728d
+  lighthouse: ethpandaops/lighthouse:electra-alpha7-27ce1a0
   lodestar: ethpandaops/lodestar:devnet-4-1531b19
   nimbus: ethpandaops/nimbus-eth2:4JM-25aae76
   prysm: ethpandaops/prysm-beacon-chain:develop-4aa5410
