@@ -62,6 +62,7 @@ testnet-homepage:
     - https://config.mekong.ethpandaops.io/el/genesis.json
     - https://config.mekong.ethpandaops.io/el/besu.json
     - https://config.mekong.ethpandaops.io/el/chainspec.json
+    - https://mario.mekong.ethpandaops.io/el/chainspec.json
 
     ### Consensus layer clients
     - https://config.mekong.ethpandaops.io/cl/config.yaml
