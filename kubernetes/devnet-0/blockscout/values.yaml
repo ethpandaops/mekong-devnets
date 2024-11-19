@@ -86,7 +86,7 @@ blockscout-stack:
   frontend:
     image:
       repository: ghcr.io/blockscout/frontend
-      tag: latest
+      tag: v1.36.0
       pullPolicy: Always
     podAnnotations:
       "promtail.io/ignore_pod": "true"
