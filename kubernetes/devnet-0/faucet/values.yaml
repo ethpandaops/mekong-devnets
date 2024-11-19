@@ -30,7 +30,7 @@ powfaucet:
 
   faucetTitle: "mekong PoW Faucet"
   faucetPrivkey: "<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.faucet_private_key}>"
-  faucetRpcUrl: "http://geth-teku-001:8545"
+  faucetRpcUrl: "https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.mekong-devnet-0.ethpandaops.io"
   faucetExplorerLink: "https://explorer.mekong.ethpandaops.io/tx/{txid}"
   faucetTxGasLimit: 100000
 
