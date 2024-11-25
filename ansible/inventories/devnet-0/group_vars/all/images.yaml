@@ -3,8 +3,8 @@ default_ethereum_client_images:
   lighthouse: docker.ethquokkaops.io/dh/ethpandaops/lighthouse:electra-alpha7-da953b8
   lodestar: docker.ethquokkaops.io/dh/chainsafe/lodestar:v1.23.0
   nimbus: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth2:mekong-support-03fe86f
-  prysm: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/beacon-chain:v5.1.2-mekong
-  prysm_validator: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/validator:v5.1.2-mekong
+  prysm: docker.ethquokkaops.io/dh/ethpandaops/prysm-beacon-chain:v5.1.2-mekong-1
+  prysm_validator: docker.ethquokkaops.io/dh/ethpandaops/prysm-validator:v5.1.2-mekong-1
   teku: docker.ethquokkaops.io/dh/consensys/teku:24.10.3
   grandine: docker.ethquokkaops.io/dh/ethpandaops/grandine:pectra-devnet4-bd507cb
 ### Execution layer clients
