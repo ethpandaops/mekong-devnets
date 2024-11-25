@@ -1,20 +1,20 @@
 default_ethereum_client_images:
 ### Consensus layer clients
   lighthouse: docker.ethquokkaops.io/dh/ethpandaops/lighthouse:electra-alpha7-da953b8
-  lodestar: docker.ethquokkaops.io/dh/ethpandaops/lodestar:devnet-4-1531b19
-  nimbus: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth2:4JM-25aae76
-  prysm: docker.ethquokkaops.io/dh/ethpandaops/prysm-beacon-chain:develop-4aa5410
-  prysm_validator: docker.ethquokkaops.io/dh/ethpandaops/prysm-validator:develop-4aa5410
+  lodestar: docker.ethquokkaops.io/dh/chainsafe/lodestar:v1.23.0
+  nimbus: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth2:mekong-support-03fe86f
+  prysm: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/beacon-chain:v5.1.2-mekong
+  prysm_validator: docker.ethquokkaops.io/gcr/prysmaticlabs/prysm/validator:v5.1.2-mekong
   teku: docker.ethquokkaops.io/dh/consensys/teku:24.10.3
   grandine: docker.ethquokkaops.io/dh/ethpandaops/grandine:pectra-devnet4-bd507cb
 ### Execution layer clients
   besu: docker.ethquokkaops.io/dh/ethpandaops/besu:pectra-devnet-4-8ab3aac
   geth: docker.ethquokkaops.io/dh/ethpandaops/geth:lightclient-prague-devnet-4-37035c5
-  erigon: docker.ethquokkaops.io/dh/ethpandaops/erigon:pectra_e2-36c7436
+  erigon: docker.ethquokkaops.io/dh/erigontech/erigon:v2.61.0-beta1
   ethereumjs: docker.ethquokkaops.io/dh/ethpandaops/ethereumjs:7702-devnet-4-plus-t8ntool-f487448
   nethermind: docker.ethquokkaops.io/dh/ethpandaops/nethermind:pectra_devnet_4-c3827bc
-  reth: docker.ethquokkaops.io/dh/ethpandaops/reth:main-dd18af1
-  nimbusel: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth1:master-9e98c93
+  reth: docker.ethquokkaops.io/dh/ethpandaops/reth:main-ac1867b
+  nimbusel: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth1:master-fbfc161
 
 default_tooling_images:
   xatu_sentry: docker.ethquokkaops.io/dh/ethpandaops/xatu:0.0.16-pectra-debian
