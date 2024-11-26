@@ -1,11 +1,11 @@
 default_ethereum_client_images:
 ### Consensus layer clients
-  lighthouse: docker.ethquokkaops.io/dh/ethpandaops/lighthouse:electra-alpha7-da953b8
+  lighthouse: docker.ethquokkaops.io/dh/ethpandaops/lighthouse:pawan-electra-alpha7-b2b728d
   lodestar: docker.ethquokkaops.io/dh/chainsafe/lodestar:v1.23.0
   nimbus: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth2:mekong-support-03fe86f
   prysm: docker.ethquokkaops.io/dh/ethpandaops/prysm-beacon-chain:v5.1.2-mekong-1
   prysm_validator: docker.ethquokkaops.io/dh/ethpandaops/prysm-validator:v5.1.2-mekong-1
-  teku: docker.ethquokkaops.io/dh/consensys/teku:24.10.3
+  teku: docker.ethquokkaops.io/dh/ethpandaops/teku:lucas-mekong-fd91815
   grandine: docker.ethquokkaops.io/dh/ethpandaops/grandine:pectra-devnet4-bd507cb
 ### Execution layer clients
   besu: docker.ethquokkaops.io/dh/ethpandaops/besu:pectra-devnet-4-8ab3aac
