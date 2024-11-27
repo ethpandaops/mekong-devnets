@@ -4,7 +4,7 @@ dora:
   fullnameOverride: dora
   image:
     repository: ethpandaops/dora
-    tag: pk910-trigger-el-requests-latest
+    tag: master
     pullPolicy: Always
   resources:
     requests:
@@ -40,6 +40,8 @@ dora:
     - name: FRONTEND_SHOW_SUBMIT_DEPOSIT
       value: "true"
     - name: FRONTEND_SHOW_SUBMIT_EL_REQUESTS
+      value: "true"
+    - name: FRONTEND_SHOW_SENSITIVE_PEER_INFOS
       value: "true"
   postgresql:
     name: "dora-postgresql"
