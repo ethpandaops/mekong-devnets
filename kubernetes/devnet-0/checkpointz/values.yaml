@@ -93,27 +93,6 @@ checkpointz:
         - name: lighthouse-reth-1
           address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lighthouse-reth-1.mekong-devnet-0.ethpandaops.io
           dataProvider: true
-        - name: lodestar-besu-1
-          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-besu-1.mekong-devnet-0.ethpandaops.io
-          dataProvider: false
-        - name: lodestar-erigon-1
-          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-erigon-1.mekong-devnet-0.ethpandaops.io
-          dataProvider: false
-        - name: lodestar-ethereumjs-1
-          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-ethereumjs-1.mekong-devnet-0.ethpandaops.io
-          dataProvider: false
-        - name: lodestar-geth-1
-          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-geth-1.mekong-devnet-0.ethpandaops.io
-          dataProvider: false
-        - name: lodestar-nethermind-1
-          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-nethermind-1.mekong-devnet-0.ethpandaops.io
-          dataProvider: false
-        - name: lodestar-nimbusel-1
-          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-nimbusel-1.mekong-devnet-0.ethpandaops.io
-          dataProvider: false
-        - name: lodestar-reth-1
-          address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.lodestar-reth-1.mekong-devnet-0.ethpandaops.io
-          dataProvider: false
         - name: nimbus-besu-1
           address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.nimbus-besu-1.mekong-devnet-0.ethpandaops.io
           dataProvider: true
