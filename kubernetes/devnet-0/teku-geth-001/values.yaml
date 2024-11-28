@@ -84,6 +84,8 @@ teku-geth-001:
               - --metrics-block-timing-tracking-enabled
               - --ignore-weak-subjectivity-period-enabled
               - --rest-api-docs-enabled
+              - --validators-performance-tracking-mode=NONE
+
             prysm:
               - --grpc-gateway-corsdomain=*
               - --chain-config-file=/data/network-config/config.yaml
