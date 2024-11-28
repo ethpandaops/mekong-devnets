@@ -204,7 +204,7 @@ teku-geth-001:
     mode: "beacon"
     p2pNodePort:
       enabled: true
-      port: 31000
+      port: 31001
     podLabels:
       network: mekong-devnet-0
       testnet: mekong-devnet-0
