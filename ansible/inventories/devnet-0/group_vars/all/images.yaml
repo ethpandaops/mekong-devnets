@@ -13,7 +13,7 @@ default_ethereum_client_images:
   erigon: docker.ethquokkaops.io/dh/erigontech/erigon:v2.61.0-beta1
   ethereumjs: docker.ethquokkaops.io/dh/ethpandaops/ethereumjs:7702-devnet-4-plus-t8ntool-f487448
   nethermind: docker.ethquokkaops.io/dh/ethpandaops/nethermind:pectra_devnet_4-c3827bc
-  reth: docker.ethquokkaops.io/dh/ethpandaops/reth:main-51afa4c
+  reth: docker.ethquokkaops.io/dh/ethpandaops/reth:main-28ef574
   nimbusel: docker.ethquokkaops.io/dh/ethpandaops/nimbus-eth1:master-e55583b
 
 default_tooling_images:
