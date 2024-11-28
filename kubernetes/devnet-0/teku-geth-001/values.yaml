@@ -8,9 +8,9 @@ teku-geth-001:
       rpcEndpoint: http://geth-teku-001:8545
       beaconEndpoint: http://teku-geth-001:5052
     checkpointSync:
-      enabled: false
+      enabled: true
       addresses:
-        mekong-devnet-0: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.dencun-devnets.node_ingress.combined}>@bn.bootnode-1.mekong-devnet-0.ethpandaops.io
+        mekong-devnet-0: https://checkpoint-sync.mekong.ethpandaops.io
     clientArgs:
       networks:
         mekong-devnet-0:
@@ -196,8 +196,8 @@ teku-geth-001:
     enabled: true
     fullnameOverride: teku-geth-001
     image:
-      repository: consensys/teku
-      tag: 24.10.3
+      repository: docker.ethquokkaops.io/dh/ethpandaops/teku
+      tag: mekong-297263b
       pullPolicy: Always
     mode: "beacon"
     p2pNodePort:
