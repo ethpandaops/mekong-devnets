@@ -120,7 +120,7 @@ teku-geth-001:
       tag: lightclient-prague-devnet-4-37035c5
       pullPolicy: Always
     p2pNodePort:
-      enabled: false
+      enabled: true
     persistence:
       enabled: true
       size: 100Gi
@@ -203,7 +203,7 @@ teku-geth-001:
       pullPolicy: Always
     mode: "beacon"
     p2pNodePort:
-      enabled: false
+      enabled: true
     podLabels:
       network: mekong-devnet-0
       testnet: mekong-devnet-0
