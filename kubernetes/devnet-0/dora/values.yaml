@@ -55,7 +55,8 @@ dora:
     priority: 1
   - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.bootnode-1.mekong-devnet-0.ethpandaops.io
     name: bootnode-1
-    priority: -1
+    archive: true
+    priority: 0
   - url: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@bn.grandine-besu-1.mekong-devnet-0.ethpandaops.io
     name: grandine-besu-1
     priority: -1
