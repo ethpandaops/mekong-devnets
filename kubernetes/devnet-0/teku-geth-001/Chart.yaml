@@ -9,4 +9,4 @@ dependencies:
   - alias: teku-geth-001
     name: ethereum-node
     repository: https://ethpandaops.github.io/ethereum-helm-charts
-    version: 0.0.7
+    version: 0.0.27
