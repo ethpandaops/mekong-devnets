@@ -43,6 +43,12 @@ erpc:
       hostV6: "[::]"
       port: 4001
 
+    ignoreMethods:
+      - "*"
+
+    allowMethods:
+      - "eth_getBlockByNumber"
+
     projects:
       - id: main
         upstreams:
