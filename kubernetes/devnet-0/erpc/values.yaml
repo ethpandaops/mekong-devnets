@@ -19,7 +19,7 @@ erpc:
     hosts:
       - host: erpc.mekong-devnet-0.ethpandaops.io
         paths:
-          - path: /
+          - path: /main/evm/7078815900
             pathType: Prefix
   config: |
     logLevel: info
