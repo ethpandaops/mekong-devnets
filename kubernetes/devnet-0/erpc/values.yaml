@@ -17,11 +17,11 @@ erpc:
     enabled: true
     className: ingress-nginx-public
     annotations:
-      ingress.kubernetes.io/rewrite-target: /main/evm/7078815900
+      nginx.ingress.kubernetes.io/rewrite-target: /main/evm/7078815900/$1
     hosts:
       - host: erpc.mekong-devnet-0.ethpandaops.io
         paths:
-          - path: /
+          - path: /(.*)
             pathType: Prefix
 
   config: |
