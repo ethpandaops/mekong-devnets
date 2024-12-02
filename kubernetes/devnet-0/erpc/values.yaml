@@ -5,7 +5,8 @@ erpc:
   image:
     repository: docker.ethquokkaops.io/gh/erpc/erpc
     tag: latest
-    pullPolicy: Always  resources:
+    pullPolicy: Always
+  resources:
     limits:
       cpu: 500m
       memory: 1Gi
