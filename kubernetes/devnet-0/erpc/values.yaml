@@ -19,7 +19,7 @@ erpc:
     annotations:
       nginx.ingress.kubernetes.io/rewrite-target: /main/evm/7078815900/$1
     hosts:
-      - host: rpc.mekong-devnet-0.ethpandaops.io
+      - host: rpc.mekong.ethpandaops.io
         paths:
           - path: /(.*)
             pathType: Prefix
