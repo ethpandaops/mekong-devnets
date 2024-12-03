@@ -4,8 +4,8 @@ erpc:
   fullnameOverride: erpc
   image:
     repository: docker.ethquokkaops.io/gh/erpc/erpc
-    tag: latest
-    pullPolicy: Always
+    tag: main
+    pullPolicy: IfNotPresent
   resources:
     limits:
       cpu: 500m
@@ -16,12 +16,10 @@ erpc:
   ingress:
     enabled: true
     className: ingress-nginx-public
-    annotations:
-      nginx.ingress.kubernetes.io/rewrite-target: /main/evm/7078815900/$1
     hosts:
-      - host: rpc.mekong.ethpandaops.io
+      - host: rpc.mekong-devnet-0.ethpandaops.io
         paths:
-          - path: /(.*)
+          - path: /
             pathType: Prefix
 
   config: |
@@ -36,6 +34,12 @@ erpc:
       listenV6: true
       httpHostV6: "[::]"
       httpPort: 4000
+      aliasing:
+        rules:
+          - matchDomain: "*"
+          - serveProject: "main"
+          - serveArchitecture: "evm"
+          - serveChain: "7078815900"
 
     metrics:
       enabled: true
@@ -43,8 +47,12 @@ erpc:
       hostV6: "[::]"
       port: 4001
 
+
     projects:
       - id: main
+        upstreamDefaults:
+          allowMethods:
+            - "eth_getBlockByNumber"
         upstreams:
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.bootnode-1.mekong-devnet-0.ethpandaops.io
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-besu-1.mekong-devnet-0.ethpandaops.io
