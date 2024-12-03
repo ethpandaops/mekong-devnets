@@ -5,7 +5,7 @@ erpc:
   image:
     repository: docker.ethquokkaops.io/gh/erpc/erpc
     tag: main
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
   resources:
     limits:
       cpu: 500m
@@ -51,7 +51,43 @@ erpc:
       - id: main
         upstreamDefaults:
           allowMethods:
+            - "eth_blockNumber"
+            - "eth_call"
+            - "eth_chainId"
+            - "eth_estimateGas"
+            - "eth_feeHistory"
+            - "eth_gasPrice"
+            - "eth_getBalance"
+            - "eth_getBlockByHash"
             - "eth_getBlockByNumber"
+            - "eth_getBlockReceipts"
+            - "eth_getBlockTransactionCountByHash"
+            - "eth_getBlockTransactionCountByNumber"
+            - "eth_getCode"
+            - "eth_getFilterChanges"
+            - "eth_getLogs"
+            - "eth_getStorageAt"
+            - "eth_getTransactionByBlockHashAndIndex"
+            - "eth_getTransactionByBlockNumberAndIndex"
+            - "eth_getTransactionByHash"
+            - "eth_getTransactionCount"
+            - "eth_getTransactionReceipt"
+            - "eth_newBlockFilter"
+            - "eth_newPendingTransactionFilter"
+            - "eth_maxPriorityFeePerGas"
+            - "eth_sendRawTransaction"
+            - "eth_subscribe"
+            - "eth_syncing"
+            - "eth_uninstallFilter"
+            - "eth_unsubscribe"
+            - "net_listening"
+            - "net_version"
+            - "rpc_modules"
+            - "web3_clientVersion"
+            - "debug_getRawReceipts"
+            - "debug_traceBlock"
+            - "trace_transaction"
+            - "trace_block"
         upstreams:
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.bootnode-1.mekong-devnet-0.ethpandaops.io
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.grandine-besu-1.mekong-devnet-0.ethpandaops.io
