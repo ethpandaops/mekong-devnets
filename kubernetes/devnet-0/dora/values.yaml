@@ -4,7 +4,7 @@ dora:
   fullnameOverride: dora
   image:
     repository: ethpandaops/dora
-    tag: master
+    tag: pk910-per-validator-operations-latest
     pullPolicy: Always
   resources:
     requests:
