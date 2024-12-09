@@ -27,6 +27,7 @@ ethereumjs_container_command_extra_args:
   - --bootnodes={{ ethereum_el_bootnodes | join(',') }}
   - --maxPeers=75
   - --isSingleNode=true
+  - --maxPerRequest=10
 prometheus_config: |
   global:
     scrape_interval: 30s
