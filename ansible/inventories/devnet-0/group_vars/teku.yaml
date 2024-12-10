@@ -48,6 +48,7 @@ teku_container_command_extra_args:
   - --metrics-block-timing-tracking-enabled
   - --ignore-weak-subjectivity-period-enabled
   - --rest-api-docs-enabled
+  - --Xvalidators-builder-registration-default-gas-limit=36000000
 teku_validator_container_volumes:
   - "{{ teku_validator_datadir }}:/validator-data"
 teku_validator_datadir: /data/teku-validator
