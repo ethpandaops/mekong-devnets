@@ -19,6 +19,7 @@ reth_container_volumes:
 reth_container_command_extra_args:
   - --chain=/network-config/genesis.json
   - --bootnodes={{ ethereum_el_bootnodes | join(',') }}
+  - --builder.gaslimit=36000000
 prometheus_config: |
   global:
     scrape_interval: 30s

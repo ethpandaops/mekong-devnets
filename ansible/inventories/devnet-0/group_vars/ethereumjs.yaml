@@ -28,6 +28,7 @@ ethereumjs_container_command_extra_args:
   - --maxPeers=75
   - --isSingleNode=true
   - --maxPerRequest=10
+  - --miner.gaslimit=36000000
 prometheus_config: |
   global:
     scrape_interval: 30s
