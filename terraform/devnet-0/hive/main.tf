@@ -87,7 +87,7 @@ resource "digitalocean_droplet" "main" {
   monitoring  = true
   backups     = false
   ipv6        = true
-  tags        = [
+  tags = [
     "Hive:${var.ethereum_network}"
   ]
 }
