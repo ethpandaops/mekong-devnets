@@ -24,7 +24,7 @@ erpc:
 
   extraEnv:
     - name: GOGC
-      value: 30
+      value: "30"
     - name: GOMEMLIMIT
       value: "3GiB"
 
