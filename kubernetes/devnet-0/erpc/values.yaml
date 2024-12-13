@@ -22,6 +22,12 @@ erpc:
           - path: /
             pathType: Prefix
 
+  extraEnv:
+    - name: GOGC
+      value: 30
+    - name: GOMEMLIMIT
+      value: 3GiB
+
   config: |
     logLevel: info
 
