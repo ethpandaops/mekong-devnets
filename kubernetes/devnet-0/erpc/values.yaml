@@ -23,9 +23,9 @@ erpc:
             pathType: Prefix
 
   extraEnv:
-    - name: GOGC
+    - name: "GOGC"
       value: "30"
-    - name: GOMEMLIMIT
+    - name: "GOMEMLIMIT"
       value: "3GiB"
 
   config: |
