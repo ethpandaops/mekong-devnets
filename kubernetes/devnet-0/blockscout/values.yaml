@@ -28,7 +28,7 @@ blockscout-stack:
 
     image:
       repository: blockscout/blockscout
-      tag: latest
+      tag: 6.10.0.commit.bc4930b9
       pullPolicy: Always
     env:
       ETHEREUM_JSONRPC_VARIANT: "geth"
@@ -86,7 +86,7 @@ blockscout-stack:
   frontend:
     image:
       repository: ghcr.io/blockscout/frontend
-      tag: v1.36.0
+      tag: v1.37.3
       pullPolicy: Always
     podAnnotations:
       "promtail.io/ignore_pod": "true"
