@@ -56,14 +56,14 @@ erpc:
     projects:
       - id: main
         cors:
-        allowedOrigins:
-          - "https://*.ethpandaops.io"
-        allowedMethods: 
-          - "GET"
-          - "POST"
-          - "OPTIONS"
-        allowedHeaders:
-          - "Content-Type"
+          allowedOrigins:
+            - "https://*.ethpandaops.io"
+          allowedMethods: 
+            - "GET"
+            - "POST"
+            - "OPTIONS"
+          allowedHeaders:
+            - "Content-Type"
         upstreamDefaults:
           allowMethods:
             - "eth_blockNumber"
