@@ -57,8 +57,8 @@ erpc:
       - id: main
         cors:
           allowedOrigins:
-            - "https://*.ethpandaops.io"
-            - "chrome-extension://*"
+            #- "https://*.ethpandaops.io"
+            - "*"
           allowedMethods: 
             - "GET"
             - "POST"
