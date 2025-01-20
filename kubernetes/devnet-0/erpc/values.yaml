@@ -30,6 +30,8 @@ erpc:
 
   serviceMonitor:
     enabled: true
+    labels:
+      vmagent: common
 
   config: |
     logLevel: info
