@@ -28,6 +28,9 @@ erpc:
     - name: GOMEMLIMIT
       value: "3GiB"
 
+  serviceMonitor:
+    enabled: true
+
   config: |
     logLevel: info
 
