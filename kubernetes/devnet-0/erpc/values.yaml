@@ -4,7 +4,7 @@ erpc:
   fullnameOverride: erpc
   image:
     repository: docker.ethquokkaops.io/gh/erpc/erpc
-    tag: "0.0.33"
+    tag: "0.0.35"
     pullPolicy: IfNotPresent
   resources:
     limits:
