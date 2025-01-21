@@ -60,6 +60,10 @@ erpc:
 
     projects:
       - id: main
+        networks:
+          - architecture: evm
+            evm:
+              chainId: 7078815900
         cors:
           allowedOrigins:
             #- "https://*.ethpandaops.io"
