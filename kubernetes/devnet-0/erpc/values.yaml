@@ -34,7 +34,7 @@ erpc:
       vmagent: common
 
   config: |
-    logLevel: info
+    logLevel: debug
 
     database:
       evmJsonRpcCache:
