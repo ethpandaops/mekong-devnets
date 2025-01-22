@@ -52,6 +52,13 @@ erpc:
   config: |
     logLevel: info
 
+    admin:
+      auth:
+        strategies:
+          - type: secret
+            secret:
+              value: <path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.password}>
+
     database:
       evmJsonRpcCache:
         connectors:
