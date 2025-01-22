@@ -31,9 +31,12 @@ erpc:
     initialDelaySeconds: 60
     periodSeconds: 120
   readinessProbe:
-    httpGet:
-      path: /healthcheck
-      port: http
+    httpGet: null
+    tcpSocket:
+      port: 4000
+    #httpGet:
+    #  path: /healthcheck
+    #  port: http
     initialDelaySeconds: 10
     periodSeconds: 20
     failureThreshold: 6
