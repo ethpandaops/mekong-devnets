@@ -24,6 +24,20 @@ erpc:
           - path: /
             pathType: Prefix
 
+  livenessProbe:
+    httpGet:
+      path: /healthcheck
+      port: http
+    initialDelaySeconds: 60
+    periodSeconds: 120
+  readinessProbe:
+    httpGet:
+      path: /healthcheck
+      port: http
+    initialDelaySeconds: 10
+    periodSeconds: 20
+    failureThreshold: 6
+  
   extraEnv:
     - name: GOGC
       value: "30"
