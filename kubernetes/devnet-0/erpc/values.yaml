@@ -36,13 +36,13 @@ erpc:
       vmagent: common
 
   config: |
-    logLevel: debug
+    logLevel: info
 
     database:
       evmJsonRpcCache:
         connectors:
           - id: memory-cache
-            driver: memory # Refer to "memory" driver docs below
+            driver: memory
             memory:
               maxItems: 100000
         policies:
