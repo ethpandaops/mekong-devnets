@@ -99,6 +99,34 @@ erpc:
           - architecture: evm
             evm:
               chainId: 7078815900
+            failsafe:
+              timeout:
+                # Network-level timeout applies to the whole lifecycle of the request,
+                # this includes retries on network and/or upstream level.
+                duration: 30s
+              retry:
+                # Total retries besides the initial request:
+                maxAttempts: 8
+                # Min delay between retries:
+                delay: 500ms
+                # Maximum delay between retries:
+                backoffMaxDelay: 10s
+                # Multiplier for each retry for exponential backoff:
+                backoffFactor: 0.3
+                # Random jitter to avoid thundering herd,
+                # e.g. add between 0 to 500ms to each retry delay:
+                jitter: 500ms
+              hedge:
+                # Recommended: Use quantile-based hedging, e.g. p99:
+                quantile: 0.99
+                # This fixed-delay is always added to whatever is the quantile-based delay.
+                delay: 0ms
+                # Minimum delay to wait before trigger next hedge.
+                minDelay: 100ms
+                # Maximum delay to wait before trigger next hedge.
+                maxDelay: 2s
+                # Maximum number of hedges to trigger.
+                maxCount: 1
         cors:
           allowedOrigins:
             #- "https://*.ethpandaops.io"
