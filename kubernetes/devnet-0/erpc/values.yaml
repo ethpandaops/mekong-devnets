@@ -3,8 +3,10 @@
 erpc:
   fullnameOverride: erpc
   image:
-    repository: docker.ethquokkaops.io/gh/erpc/erpc
-    tag: "0.0.35"
+    #repository: docker.ethquokkaops.io/gh/erpc/erpc
+    #tag: "0.0.35"
+    repository: docker.io/skylenet/erpc
+    tag: fix-chainid
     pullPolicy: IfNotPresent
   resources:
     limits:
