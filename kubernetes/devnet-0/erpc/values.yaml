@@ -123,11 +123,13 @@ erpc:
           - architecture: evm
             evm:
               chainId: 7078815900
+              statePollerInterval: 30s
+              nodeType: full
             failsafe:
               timeout:
                 # Network-level timeout applies to the whole lifecycle of the request,
                 # this includes retries on network and/or upstream level.
-                duration: 30s
+                duration: 20s
               retry:
                 # Total retries besides the initial request:
                 maxAttempts: 8
