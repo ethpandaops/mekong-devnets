@@ -6,7 +6,7 @@ erpc:
     #repository: docker.ethquokkaops.io/gh/erpc/erpc
     #tag: "0.0.35"
     repository: docker.io/skylenet/erpc
-    tag: fix-chainid
+    tag: fix-chainid-2
     pullPolicy: IfNotPresent
   resources:
     limits:
