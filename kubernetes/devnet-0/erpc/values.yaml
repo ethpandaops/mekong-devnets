@@ -53,7 +53,7 @@ erpc:
       vmagent: common
 
   config: |
-    logLevel: info
+    logLevel: debug
 
     admin:
       auth:
