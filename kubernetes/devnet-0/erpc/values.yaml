@@ -123,8 +123,6 @@ erpc:
           - architecture: evm
             evm:
               chainId: 7078815900
-              statePollerInterval: 30s
-              nodeType: full
             failsafe:
               timeout:
                 # Network-level timeout applies to the whole lifecycle of the request,
@@ -230,14 +228,28 @@ erpc:
         #  - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-nethermind-1.mekong-devnet-0.ethpandaops.io
         #  - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.nimbus-reth-1.mekong-devnet-0.ethpandaops.io
         #  - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-besu-1.mekong-devnet-0.ethpandaops.io
-          - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-ethereumjs-1.mekong-devnet-0.ethpandaops.io
+        #  - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-ethereumjs-1.mekong-devnet-0.ethpandaops.io
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-1.mekong-devnet-0.ethpandaops.io
+            statePollerInterval: 30s
+            nodeType: full
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-10.mekong-devnet-0.ethpandaops.io
+            statePollerInterval: 30s
+            nodeType: full
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-geth-11.mekong-devnet-0.ethpandaops.io
+            statePollerInterval: 30s
+            nodeType: full
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-1.mekong-devnet-0.ethpandaops.io
+            statePollerInterval: 30s
+            nodeType: full
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-nethermind-2.mekong-devnet-0.ethpandaops.io
+            statePollerInterval: 30s
+            nodeType: full
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-reth-1.mekong-devnet-0.ethpandaops.io
+            statePollerInterval: 30s
+            nodeType: full
           - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.prysm-reth-2.mekong-devnet-0.ethpandaops.io
+            statePollerInterval: 30s
+            nodeType: full
         #  - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-besu-1.mekong-devnet-0.ethpandaops.io
         #  - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-erigon-1.mekong-devnet-0.ethpandaops.io
         #  - endpoint: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.teku-erigon-2.mekong-devnet-0.ethpandaops.io
