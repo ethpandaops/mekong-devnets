@@ -12,7 +12,7 @@
 
 Status   | Network    | Links   | Ansible                                                      | Terraform | Kubernetes
 ------   | --------   | ----     |  -----                                                       | -------   | ------
- 🟢 Mekong | [mekong](https://mekong.ethpandaops.io/)   | [Network config](network-configs/devnet-0) / [Inventory](https://bootnode-1.mekong-devnet-0.ethpandaops.io/meta/api/v1/inventory.json) / [Validator ranges](https://bootnode-1.mekong-devnet-0.ethpandaops.io/meta/api/v1/validator-ranges.json)    | [🔗](ansible/inventories/mekong-devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
+🔴 Mekong | [mekong](https://mekong.ethpandaops.io/)   | [Network config](network-configs/devnet-0) / [Inventory](https://bootnode-1.mekong-devnet-0.ethpandaops.io/meta/api/v1/inventory.json) / [Validator ranges](https://bootnode-1.mekong-devnet-0.ethpandaops.io/meta/api/v1/validator-ranges.json)    | [🔗](ansible/inventories/mekong-devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
 
 # Development
 ## Version management for tools
