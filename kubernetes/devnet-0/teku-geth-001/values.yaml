@@ -40,13 +40,16 @@ teku-geth-001:
               - --Seq.ApiKey=yuOqjKOHhZCw2D2U7pmL
               - --Metrics.PushGatewayUrl=http://94.237.52.161:9000/metrics/nethermind-iudiy4raagaizaih1phuaShekighoJ2ixaecahvii7ohte3oozeeh0eTh7Aich1Shee9ceetuy3iGhexoh5naithoot8rebi7fee
             geth:
-              - --http.api=eth,net,web3,debug,admin
+              - --http.api=eth,net,web3,debug,admin,txpool
               - --http.vhosts=*
               - --networkid=7078815900
               - --syncmode=full
               - --bootnodes=enode://125d2dddd0dc0d34b526910d49592545a1e4fe25139be9d9e0eed396211dbd37aa0c0a7fa0444c315803d814e743f890529b58b9261289d5303e16477c216b39@157.230.225.158:30303?discport=30303,enode://52d4c61afd1d9b93e70acefd17cfabaed27e8be309927b2e9ecd648cb7edc09ef5c7f4aa579a00c5545e4ef2305e4df8600b8f829e80c056f9805860116d3168@137.184.72.127:30303?discport=30303,enode://9ff1f345d8f32b57d765ab8bdadc389934812bdc16f5d16b6fac61f497b17317c07d99bad36ab7e105db75b4b17dae102b39741d5bae7225f7d355211ff64948@152.42.247.97:30303?discport=30303,enode://8855852f358a5fdd8f938999bea89fd1944679a5e0d4c46151cf49b46c8475b420eed794a920072dcae7bfa1cb5a43b377bf145e338e600ccc751524aaa67414@24.199.95.34:30303?discport=30303,enode://a625d330121768e2e225a20f3f047728ea9d65dcad691e1d1a3381bc07a6372cef612b76b6dbaca1352452ed91ee5c9fc07c595b55228b21cc8e62c6eb20e28d@161.35.60.7:30303?discport=30303
               - --ethstats=k8s-teku-geth-001:<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.ethstats_secret}>@ethstats.mekong-devnet-0.ethpandaops.io
               - --rpc.allow-unprotected-txs
+              - --state.scheme=hash
+              - --gcmode=archive
+              - --txlookuplimit=0
             erigon:
               - --http.api=eth,erigon,engine,web3,net,debug,trace,txpool,admin
               - --http.vhosts=*

@@ -28,13 +28,13 @@ blockscout-stack:
 
     image:
       repository: blockscout/blockscout
-      tag: latest
+      tag: 6.10.0.commit.bc4930b9
       pullPolicy: Always
     env:
       ETHEREUM_JSONRPC_VARIANT: "geth"
-      ETHEREUM_JSONRPC_HTTP_URL: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.mekong-devnet-0.ethpandaops.io
-      ETHEREUM_JSONRPC_WS_URL: ws://geth-teku-001:8546
-      ETHEREUM_JSONRPC_TRACE_URL: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.mekong-devnets.node_ingress.combined}>@rpc.lighthouse-geth-1.mekong-devnet-0.ethpandaops.io
+      ETHEREUM_JSONRPC_HTTP_URL: http://geth-teku-001:8545
+      ETHEREUM_JSONRPC_WS_URL: ws://geth-teku-001:8545
+      ETHEREUM_JSONRPC_TRACE_URL: http://geth-teku-001:8545
       COIN: ETH
       DATABASE_URL: postgres://postgres:postgres@blockscout-postgresql:5432/blockscout?ssl=false
       DISABLE_EXCHANGE_RATES: "true"
@@ -86,7 +86,7 @@ blockscout-stack:
   frontend:
     image:
       repository: ghcr.io/blockscout/frontend
-      tag: v1.36.0
+      tag: v1.37.3
       pullPolicy: Always
     podAnnotations:
       "promtail.io/ignore_pod": "true"
@@ -132,4 +132,4 @@ postgresql:
       max_connections = 1024
     persistence:
       enabled: true
-      size: "100Gi"
+      size: "200Gi"
